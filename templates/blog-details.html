@@ -1,9 +1,9 @@
-{% extends "base.html" %}
-{% load static %}
+  {% extends "base.html" %}
+  {% load static %}
 
-{% block title %}{{ post.title }} — Blog Details{% endblock %}
+  {% block title %}{{ post.title }} — Blog Details{% endblock %}
 
-{% block content %}  
+  {% block content %}  
 
 
     <!--================ Hero sm Banner start =================-->      
@@ -33,11 +33,11 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="main_blog_details">
-{% if post.image_url %}
+  {% if post.image_url %}
                         <img class="img-fluid" src="{{ post.image_url }}" alt="{{ post.title }}">
-{% else %}
+  {% else %}
                         <img class="img-fluid" src="{% static 'images/banner/blog.png' %}" alt="Default blog image">
-{endif%}
+  {endif%}
                         <h4>{{ post.title }}</h4>
                         <div class="user_details">
                             <div class="mt-sm-0 mt-3">
