@@ -1,9 +1,9 @@
-  {% extends "base.html" %}
-  {% load static %}
+{% extends "base.html" %}
+{% load static %}
 
-  {% block title %}{{ post.title }} — Blog Details{% endblock %}
+{% block title %}{{ post.title }} — Blog Details{% endblock %}
 
-  {% block content %}
+{% block content %}
       <!--================Hero Banner start =================-->  
       <section class="mb-30px">
         <div class="container">
@@ -53,17 +53,17 @@
               <div class="single-recent-blog-post">
                 <div class="thumb">
                   {% if post.image_url %}
-                  <img
-                    class="img-fluid"
-                    src={{post.image_url}}
-                    alt=""
-                  />
+                    <img
+                      class="img-fluid"
+                      src={{post.image_url}}
+                      alt=""
+                    />
                   {% else %}
-                  <img
-                    class="img-fluid"
-                    src="{% static 'img/blog/blog4' %}.png"
-                    alt=""
-                  />
+                    <img
+                      class="img-fluid"
+                      src="{% static 'img/blog/blog4' %}.png"
+                      alt=""
+                    />
                   {% endif %}
                   <ul class="thumb-info  style="max-width: 550px;"">
                     <li>
@@ -88,7 +88,7 @@
                   <a class="button" href={% url 'post_detail' slug=post.slug %}>Read More <i class="ti-arrow-right"></i></a>
                 </div>
               </div>
-                  {% endfor %}
+            {% endfor %}
               <div class="row">
                 <div class="col-lg-12">
                   <nav class="blog-pagination justify-content-center d-flex">
