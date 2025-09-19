@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}{{ post.title }} — Blog Details{% endblock %}
+{% block title %}
+  <title>Sensive Blog - Home</title>
+{% endblock title %}
 
 {% block content %}
       <!--================Hero Banner start =================-->  
@@ -65,17 +67,10 @@
                       alt=""
                     />
                   {% endif %}
-                  <ul class="thumb-info  style="max-width: 550px;"">
-                    <li>
-                      <a href="#"><i class="ti-user"></i>{{post.author}}</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}}
-                        Comments</a>
-                    </li>
+                  <ul class="thumb-info" style="max-width: 550px;">
+                    <li><a href="#"><i class="ti-user"></i> {{ post.author }} </a></li>
+                    <li><a href="#"><i class="ti-notepad"></i> {{ post.published_at }} </a></li>
+                    <li><a href="#"><i class="ti-themify-favicon"></i> {{ post.comments_amount }} Comments</a></li>
                   </ul>
                 </div>
                 <div class="details mt-20">
